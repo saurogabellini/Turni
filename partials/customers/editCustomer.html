@@ -15,6 +15,7 @@
 				<label class="control-label" for="firstname">Turno</label>
 				<div class="controls">
 					<input type="text" class="span4 disabled" id="turno" ng-model="customer.turno"  disabled>
+					<input type="checkbox" id="noturno" ng-model="customer.noturno" ng-true-value="1" ng-false-value="0">(Cancella turno)
 				</div> <!-- /controls -->
 			</div> <!-- /control-group -->
 
@@ -39,8 +40,8 @@
 
 			<div class="form-actions">
 				<input type="hidden" name="id" ng-model="customer.id">
-				<button type="button" class="btn btn-primary" validation-submit="editCustomerForm" ng-click="updateCustomer()">Save</button>
-				<button ng-click="cancel()" class="btn">Cancel</button>
+				<button type="button" class="btn btn-primary" validation-submit="editCustomerForm" ng-click="updateCustomer()">Salva</button>
+				<button ng-click="cancel()" class="btn">Annulla</button>
 			</div> <!-- /form-actions -->
 		</fieldset>
 	</form>

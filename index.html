@@ -25,18 +25,30 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<style>
+	.ROSSO {
+	    color: red;
+		}
+
+	.NORMALE {
+
+	}
+	.CANCELLATO {
+		text-decoration: line-through;
+	}
+	</style>
 </head>
 <body>
    <div ng-include="'partials/common/loginHeader.html'" ng-show="!userInfo"></div> <!-- loginHeader -->
-   <div ng-include="'partials/common/userHeader.html'" ng-show="userInfo"></div> <!-- userHeader -->	
-   	
+   <div ng-include="'partials/common/userHeader.html'" ng-show="userInfo"></div> <!-- userHeader -->
+
    <div class="main">
 		<div class="main-inner">
 			<div class="container" ui-view>
 			</div>
 		</div>
 	</div>
-   	
+
    <div ng-include="'partials/common/footer.html'"></div> <!-- footer -->
 
   <!-- In production use:
@@ -44,19 +56,19 @@
   -->
     <script src="bower_components/jquery/jquery-1.11.0.js"></script>
 	<script src="bower_components/angular-chart/Chart.min.js"></script>
-	
+
 	<script src="bower_components/angular/angular.min.js"></script>
-	<script src="bower_components/angular-ui-router/angular-ui-router.min.js"></script>	
+	<script src="bower_components/angular-ui-router/angular-ui-router.min.js"></script>
 	<script src="bower_components/angular-ng-table/ng-table.min.js"></script>
-		
-	<script src="bower_components/bootstrap/bootstrap.min.js"></script> 
-	
+
+	<script src="bower_components/bootstrap/bootstrap.min.js"></script>
+
 	<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script src="bower_components/angular-validation/angular-validation.js"></script>
 	<script src="bower_components/angular-validation/angular-validation-rule.js"></script>
 	<script src="bower_components/angular-chart/angular-chart.js"></script>
-			
+
 	<script src="app.js"></script>
 	<script src="partials/users/users.js"></script>
 	<script src="partials/dashboard/dashboard.js"></script>

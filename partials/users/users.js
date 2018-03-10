@@ -52,6 +52,14 @@ myApp.controller('loginController', ['$scope', 'userServices', '$location', '$ro
   if (localStorage.getItem('mail')!=null) {
      $scope.login.email=localStorage.getItem('mail');
      $scope.login.password=localStorage.getItem('password');
+     userServices.login($scope.login).then(function(result){
+       $scope.data = result;
+       if (result.data.success) {
+         window.sessionStorage["userInfo"] = JSON.stringify(result.data);
+         $rootScope.userInfo = JSON.parse(window.sessionStorage["userInfo"]);
+           $location.path("/dashboard");
+       }
+     });
   }
 
 	$scope.doLogin = function() {
@@ -86,6 +94,8 @@ myApp.controller('signupController', ['$scope', 'userServices', '$location', fun
 
 myApp.controller('logoutController', ['$scope', '$location', '$rootScope', function($scope, $location, $rootScope) {
 	sessionStorage.clear();
+  localStorage.setItem('mail', '');
+  localStorage.setItem('password', '');
 	$rootScope.userInfo = false;
 	$location.path("/login");
 }]);
