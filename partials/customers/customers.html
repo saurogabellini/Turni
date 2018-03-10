@@ -18,14 +18,14 @@
 						<td data-title="'Giorno'" sortable="'first_name'" filter="{ 'first_name': 'text' }">
 							{{customer.giorno}}
 						</td>
-						<td data-title="'Orario'" sortable="'last_name'" filter="{ 'last_name': 'text' }" class="{{customer.noturno == '0' ? 'NORMALE' : 'CANCELLATO'}} " >
+						<td data-title="'Orario'" sortable="'last_name'" filter="{ 'last_name': 'text' }" class="{{customer.noturno == '0' ? customer.orario == 'Libero' ? 'LIBERO' : 'NORMALE' : 'CANCELLATO'}} " >
 							{{customer.orario}}
 						</td>
-						<td data-title="'Modifica'" sortable="'email'" filter="{ 'email': 'text' }">
+						<td data-title="'Modifica'" sortable="'email'" filter="{ 'email': 'text' }" class="{{ customer.modifica == 'Libero' || customer.modifica == 'Ferie'  || customer.modifica == 'Permesso'  ? 'LIBERO' : 'NORMALE' }} ">
 							{{customer.modifica}}
 						</td>
 						<td data-title="'Modifica'">
-							  <button class="btn btn-primary" ng-click="edit({id: customer.id})">Modifica</button>
+							  <button class="btn btn-primary" ng-click="edit({id: customer.id})">Modif.</button>
 						</td>
 					</tr>
 				</table>

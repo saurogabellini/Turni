@@ -133,7 +133,7 @@ myApp.controller('getCustomersController', ['$scope',  'customerServices', '$loc
 		if (!result.data.error) {
        var data = result.data.response;
        //dataTable.render($scope, '', "customerstList", result.data.response);
-       $scope.customerstList = new ngTableParams({},{ dataset: $scope.venditori});
+       $scope.customerstList = new ngTableParams({ count: $scope.venditori.length},{ counts: [], dataset: $scope.venditori});
 		}
 	});
 
@@ -154,7 +154,7 @@ myApp.controller('getCustomersController', ['$scope',  'customerServices', '$loc
 		$scope.data = result.data;
     $scope.venditori = result.data.response;
 		if (!result.data.error) {
-			$scope.customerstList = new ngTableParams({},{ dataset: $scope.venditori});
+			$scope.customerstList = new ngTableParams({ count: $scope.venditori.length},{ counts: [], dataset: $scope.venditori});
       $scope.customerstList.settings().$scope = $scope;
       $scope.customerstList.reload();
       $scope.customerstList.page(1);
