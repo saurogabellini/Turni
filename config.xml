@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "ItineraApp"
-        version     = "1.0.0" >
+        id          = "www.turni.com"
+        version     = "3.1.0" >
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-        <string>300</string>
+        <string>310</string>
     </gap:config-file>
 
-    <preference name="phonegap-version" value="3.7.0" />
-	<gap:platform name="ios" />
+    <preference name="phonegap-version"  />	
 	<gap:platform name="android" />
-    <gap:platform name="winphone" />
+    
 
     
     <access origin="10.0.0.1" />
@@ -19,25 +18,21 @@
     <allow-intent href="*" />
     <allow-navigation href="*" />
 
-    <name>ItineraApp</name>
+
+    <name>Turni</name>
     <icon src="icon.png" gap:platform="ios" width="57" height="57" />
-
-
+    
 		
-    <gap:splash src="splash.png" gap:platform="ios"     width="320" height="480" />
-       
-    <author href="http://www.chivuolessersarabada.com" email="info@chivuolessersarabada.com">
+    <gap:splash src="splash.
+    <author href="" email="sgabe76@gmail.com">
         Sauro Gabellini
     </author>
 
-    <plugin name="org.apache.cordova.camera" spec="0.3.6" source="pgb" />
-    <plugin name="cordova-plugin-inappbrowser" spec="1.0.1" source="pgb" />
-    <plugin name="net.roughshod.plugins.barcodescanner" spec="3.0.0" source="pgb" />
+	    
+    <plugin name="cordova-plugin-inappbrowser" spec="1.0.1" />    
 
-    <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
-    <gap:plugin name="org.apache.cordova.vibration"  />
-	<gap:plugin name="nl.x-services.plugins.insomnia"/>
-    <gap:plugin name="org.apache.cordova.file-transfer" spec="0.4.6" source="pgb" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm"/>        
+    <plugin name="cordova-plugin-file-transfer" spec="~1.6.1" />
     
 	<access origin="*" />
 </widget>
