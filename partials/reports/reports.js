@@ -22,7 +22,7 @@ myApp.factory('reportsServices', ['$http', function($http) {
         return $http.get('http://www.chivuolessersarabanda.com/calendArio/DatiUtente.ashx?Login=' + $scope.userInfo.data.email).success(function(data) { return data; });
       },
       update: function($scope,customerReq) {
-          return $http.get('http://www.chivuolessersarabanda.com/calendario/UpdateUtente.ashx?NOME=' + customerReq.NOME + '&COGNOME=' + customerReq.COGNOME + '&INIZIOTURNO=' + customerReq.INIZIOTURNO + '&Login=' + $scope.userInfo.data.email , customerReq).success(function(data) { return data; });
+          return $http.get('http://www.chivuolessersarabanda.com/calendario/UpdateUtente.ashx?NOME=' + customerReq.NOME + '&scontrinostandard=' + customerReq.scontrinostandard.replace(",", ".") + '&COGNOME=' + customerReq.COGNOME + '&INIZIOTURNO=' + customerReq.INIZIOTURNO + '&Login=' + $scope.userInfo.data.email , customerReq).success(function(data) { return data; });
         },
 	}
 

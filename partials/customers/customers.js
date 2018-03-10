@@ -89,7 +89,7 @@ myApp.factory('customerServices', ['$http', function($http) {
         return $http.get('http://www.chivuolessersarabanda.com/calendario/giorno.ashx?Id=' + customerId + '&Login=' + $scope.userInfo.data.email).success(function(data) { return data; });
       },
 	  updateCustomer: function($scope,customerReq) {
-        return $http.get('http://www.chivuolessersarabanda.com/calendario/UpdateGiorno.ashx?note=' + customerReq.note + '&noturno=' + customerReq.noturno + '&modifica=' + customerReq.modifica + '&Id=' + customerReq.id + '&Login=' + $scope.userInfo.data.email , customerReq).success(function(data) { return data; });
+        return $http.get('http://www.chivuolessersarabanda.com/calendario/UpdateGiorno.ashx?note=' + customerReq.note + '&scontrino=' + customerReq.scontrino + '&noturno=' + customerReq.noturno + '&modifica=' + customerReq.modifica + '&Id=' + customerReq.id + '&Login=' + $scope.userInfo.data.email , customerReq).success(function(data) { return data; });
       },
 	}
 
@@ -139,7 +139,13 @@ myApp.controller('getCustomersController', ['$scope',  'customerServices', '$loc
 
 
 
-
+  $scope.calculateTotal = function(){
+      var total = 0;
+      $scope.venditori.forEach(function(item){
+          total += item.scontrino;
+      });
+      return Math.round(total * 100) / 100 ;
+  };
 
 
   $scope.edit = function(item){
