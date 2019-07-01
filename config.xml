@@ -10,7 +10,7 @@
 
     <preference name="phonegap-version"  />	
 	
-    
+     <preference name="android-targetSdkVersion" value="26" />
     <access origin="*" />
     <allow-intent href="*" />
     <allow-navigation href="*" />
