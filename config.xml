@@ -8,8 +8,6 @@
         <string>340</string>
     </gap:config-file>
 
-	
-    <preference name="phonegap-version"  />	
 	<gap:platform name="android" />
 	
 	
