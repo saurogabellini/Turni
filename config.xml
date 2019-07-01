@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "www.turni.com"
         version     = "3.4.0" >
 
@@ -7,26 +8,29 @@
         <string>340</string>
     </gap:config-file>
 
+    <preference name="phonegap-version"  />	
 	<gap:platform name="android" />
-	
-	
-     <preference name="android-targetSdkVersion" value="28" />
-    <access origin="*" />
+    
+
+    
+	<access origin="*" />
     <allow-intent href="*" />
     <allow-navigation href="*" />
+    <name>Ristorando</name>
+    <icon src="icon.png" gap:platform="android" width="57" height="57" />
 
 
-    <name>Turni</name>
-    <icon src="icon.png" width="57" height="57" />
-    
 		
-    
-    <author href="" email="sgabe76@gmail.com">
+    <gap:splash src="splash.png" gap:platform="android"     width="320" height="480" />
+       
+    <author href="https://advenias.it/" email="senior@advenias.it">
         Sauro Gabellini
     </author>
-
-	    <plugin name="cordova-plugin-inappbrowser" />   
-       <gap:plugin name="cordova-plugin-whitelist" source="npm"/>        
-    <plugin name="cordova-plugin-file-transfer" />
+	    
+    <plugin name="cordova-plugin-inappbrowser" spec="1.0.1" />        
+    <plugin name="cordova-plugin-barcodescanner" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm"/>        
+    <plugin name="cordova-plugin-file-transfer" spec="~1.6.1" />
+    
 	<access origin="*" />
 </widget>
