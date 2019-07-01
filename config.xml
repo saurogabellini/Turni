@@ -17,7 +17,7 @@
     <allow-navigation href="*" />
     <name>Turni</name>
     <icon src="icon.png" gap:platform="android" width="57" height="57" />
-
+    <preference name="android-targetSdkVersion" value="28" />
 
 	
     <author href="https://advenias.it/" email="senior@advenias.it">
