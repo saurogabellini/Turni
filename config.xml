@@ -12,17 +12,14 @@
 	<gap:platform name="android" />
     
 
-    
-	<access origin="*" />
+    <access origin="*" />
     <allow-intent href="*" />
     <allow-navigation href="*" />
-    <name>Ristorando</name>
+    <name>Turni</name>
     <icon src="icon.png" gap:platform="android" width="57" height="57" />
 
 
-		
-    <gap:splash src="splash.png" gap:platform="android"     width="320" height="480" />
-       
+	
     <author href="https://advenias.it/" email="senior@advenias.it">
         Sauro Gabellini
     </author>
