@@ -26,10 +26,10 @@
     </author>
 
 	    
-    <plugin name="cordova-plugin-inappbrowser" spec="1.0.1" />    
+    <plugin name="cordova-plugin-inappbrowser" />    
 
     <gap:plugin name="cordova-plugin-whitelist" source="npm"/>        
-    <plugin name="cordova-plugin-file-transfer" spec="~1.6.1" />
+    <plugin name="cordova-plugin-file-transfer"  />
     
 	<access origin="*" />
 </widget>
