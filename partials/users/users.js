@@ -33,7 +33,7 @@ myApp.factory('userServices', ['$http', function($http) {
     var factoryDefinitions = {
       login: function(loginReq) {
 		  //loginReq
-        return $http.post('http://www.chivuolessersarabanda.com/calendario/login.ashx?Login=' + loginReq.email + '&Password=' + loginReq.password).success(function(data) { return data; });
+        return $http.post('https://iuvant.e-personam.com//calendario/login.ashx?Login=' + loginReq.email + '&Password=' + loginReq.password).success(function(data) { return data; });
       },
 	  signup: function(signupReq) {
         return $http.post('partials/common/mock/success.json', signupReq).success(function(data) { return data; });

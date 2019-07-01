@@ -20,10 +20,10 @@ myApp.factory('dashboardServices', ['$http', function($http) {
 
     var factoryDefinitions = {
       getTodaysStats: function($scope) {
-        return $http.post('http://www.chivuolessersarabanda.com/calendario/TurnoOggi.ashx?LOGIN=' + $scope.userInfo.data.email).success(function(data) { return data; });
+        return $http.post('https://iuvant.e-personam.com//calendario/TurnoOggi.ashx?LOGIN=' + $scope.userInfo.data.email).success(function(data) { return data; });
       },
 	  getRecentNews: function($scope) {
-        return $http.get('http://www.chivuolessersarabanda.com/calendario/ProssimeVariazioni.ashx?LOGIN=' + $scope.userInfo.data.email).success(function(data, status, headers, config) { return data; });
+        return $http.get('https://iuvant.e-personam.com//calendario/ProssimeVariazioni.ashx?LOGIN=' + $scope.userInfo.data.email).success(function(data, status, headers, config) { return data; });
       },
 	  getLastFiveCustomers: function() {
         return $http.get('partials/dashboard/mock/customers_last_five.json').success(function(data) { return data; });

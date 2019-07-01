@@ -79,17 +79,17 @@ myApp.factory('customerServices', ['$http', function($http) {
 
     var factoryDefinitions = {
 	  getCustomers: function($scope,meseint) {
-        return $http.get('http://www.chivuolessersarabanda.com/calendario/mese.ashx?Anno=2019&Mese=' + meseint  + '&Login=' + $scope.userInfo.data.email).success(function(data) { return data; });
+        return $http.get('https://iuvant.e-personam.com//calendario/mese.ashx?Anno=2019&Mese=' + meseint  + '&Login=' + $scope.userInfo.data.email).success(function(data) { return data; });
       },
 	  addCustomer: function(customerReq) {
         return $http.post('partials/common/mock/success.json', customerReq).success(function(data) { return data; });
       },
 	  getCustomer: function($scope, customerId) {
 
-        return $http.get('http://www.chivuolessersarabanda.com/calendario/giorno.ashx?Id=' + customerId + '&Login=' + $scope.userInfo.data.email).success(function(data) { return data; });
+        return $http.get('https://iuvant.e-personam.com//calendario/giorno.ashx?Id=' + customerId + '&Login=' + $scope.userInfo.data.email).success(function(data) { return data; });
       },
 	  updateCustomer: function($scope,customerReq) {
-        return $http.get('http://www.chivuolessersarabanda.com/calendario/UpdateGiorno.ashx?note=' + customerReq.note + '&scontrino=' + customerReq.scontrino + '&noturno=' + customerReq.noturno + '&modifica=' + customerReq.modifica + '&Id=' + customerReq.id + '&Login=' + $scope.userInfo.data.email , customerReq).success(function(data) { return data; });
+        return $http.get('https://iuvant.e-personam.com//calendario/UpdateGiorno.ashx?note=' + customerReq.note + '&scontrino=' + customerReq.scontrino + '&noturno=' + customerReq.noturno + '&modifica=' + customerReq.modifica + '&Id=' + customerReq.id + '&Login=' + $scope.userInfo.data.email , customerReq).success(function(data) { return data; });
       },
 	}
 
