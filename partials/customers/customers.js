@@ -79,7 +79,7 @@ myApp.factory('customerServices', ['$http', function($http) {
 
     var factoryDefinitions = {
 	  getCustomers: function($scope,meseint) {
-        return $http.get('http://www.chivuolessersarabanda.com/calendario/mese.ashx?Anno=2018&Mese=' + meseint  + '&Login=' + $scope.userInfo.data.email).success(function(data) { return data; });
+        return $http.get('http://www.chivuolessersarabanda.com/calendario/mese.ashx?Anno=2019&Mese=' + meseint  + '&Login=' + $scope.userInfo.data.email).success(function(data) { return data; });
       },
 	  addCustomer: function(customerReq) {
         return $http.post('partials/common/mock/success.json', customerReq).success(function(data) { return data; });
